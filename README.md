@@ -1,68 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Prueba Técnica realizada por Itziar Ortega
 
-## Available Scripts
+Se tratada de una aplicación web que muestra preguntas de Trivial traidas desde la API de Open Trivia Database y en la que puedes buscar según la dificultad de las mismas.
 
-In the project directory, you can run:
+## Tecnologías usadas
+- React.js
+- JavaScript
+- Material UI (Librería CSS in JS)
+- Axios
 
-### `npm start`
+## TODO's
+Aparte de la funcionalidad de buscar según la dificultad de las preguntas se podrían añadir las siguientes funcionalidades:
+- Filtrar por categoría.
+- Filtrar por pregunta.
+- Filtrar por el tipo de respuesta.
+- Paginación para mostrar más preguntas.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Tanto la de buscar por categoría como buscar por pregunta puede implementarse añadiendo un input donde el usuario pueda escribir y hacer la búsqueda en base a ese value.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+En cuanto al filtrado por tipo de respuesta, se podrá hacer con inputs de tipo checkbox o radio con las opciones existentes.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Por último, para la paginación de los resultados hay que definir el número máximo de resultados que se visualizan por página. En este caso, la API te devuelve un máximo de 50 resultados, por lo que mostraría 10 preguntas por página. Para ello, usaría la función map y haría un condicional donde se compruebe si el index del resultado por el que se está iterando es múltiplo de 9 y, en el caso de que así fuera, se debe mostar en la siguiente página.
