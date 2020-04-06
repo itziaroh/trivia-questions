@@ -5,15 +5,15 @@ import MainTable from '../MainTable/MainTable';
 import PagButtons from '../Pagination/PagButtons';
 
 const MainPage = props => {
-  const { handleChange, handleSubmit, value, data } = props;
+  const { handleChange, handleSubmit, value, currentResults, handleClick } = props;
   const classes = style();
 
   return (
     <main className={classes.main}>
       <SearchInput handleChange={handleChange}
         handleSubmit={handleSubmit} value={value} />
-      <MainTable data={data} />
-      <PagButtons />
+      <MainTable currentResults={currentResults} />
+      <PagButtons handleClick={handleClick} />
     </main>
   )
 }

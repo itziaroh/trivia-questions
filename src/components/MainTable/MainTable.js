@@ -13,7 +13,7 @@ import style from './style'
 import { StyledTableCell, StyledTableRow } from './style'
 
 
-const MainTable = ({ data }) => {
+const MainTable = ({ currentResults }) => {
 
   const classes = style()
 
@@ -33,7 +33,7 @@ const MainTable = ({ data }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((row, index) => (
+            {currentResults.map((row, index) => (
               <StyledTableRow key={index}>
                 <StyledTableCell component="th" scope="row">
                   ID Number
