@@ -13,8 +13,10 @@ Aparte de la funcionalidad de buscar según la dificultad de las preguntas se po
 - Filtrar por categoría.
 - Filtrar por pregunta.
 - Filtrar por el tipo de respuesta.
-- Paginación para mostrar más preguntas. ✅
+- Paginación para mostrar más preguntas.* ✅ 
 
 Tanto la de buscar por categoría como buscar por pregunta puede implementarse añadiendo un input donde el usuario pueda escribir y hacer la búsqueda en base a ese value.
 
 En cuanto al filtrado por tipo de respuesta, se podrá hacer con inputs de tipo checkbox o radio con las opciones existentes.
+
+*Nota: Solo funciona cuando la dificultad de las preguntas es cualquiera ya que la API solo permite 10 resultados al filtrar por dificultad.
